@@ -65,6 +65,33 @@ Goal: Learn users, groups, roles, policies, MFA, and best practices.
   ]
 }
 
+- Name: S3LogsReadPolicy.
+- Create policy.
 
+## Step 6: Attach Custom Policy
+- IAM → Users → click analyst.
+- Permissions → Add permissions → Attach policies directly.
+- Search S3LogsReadPolicy → select it → Add permissions.
+
+## Step 7: Create an IAM Role for EC2
+- IAM → Roles → Create role.
+- Trusted entity: AWS service → EC2.
+- Permissions: AmazonSSMManagedInstanceCore.
+- Role name: EC2-SSM-Role.
+- Create role.
+
+Step 8: Test User Permissions
+- Sign out → log in as analyst.
+- Try S3:
+  - You can list the CloudTrail logs bucket.
+  - Try uploading → should be Access Denied.
+- Try creating an EC2 → should also be Access Denied.
+
+<img width="1912" height="865" alt="image" src="https://github.com/user-attachments/assets/56347c78-3dca-455f-aecc-89c388dd5e27" />
+ - Access to create an EC2 instance denied
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/6034cfa7-49fa-47fc-948f-e451893c305d" />
+
+- Access to create a Bucket denied
 
 </details>
