@@ -112,11 +112,11 @@ Step 8: Test User Permissions
 
 ### 2: Create log bucket
 
-   - S3 → Create bucket → name: lab-m3-logs-<acctid>.
+   - S3 → Create bucket → name:  New-cloudlab
 
    - Enable server access logging
 
-   - Open main bucket → Properties → Server access logging → enable, target bucket = lab-m3-logs.
+   - Open main bucket → Properties → Server access logging → enable, target bucket =  New-cloudlab.
 
  ### 3: Add lifecycle rule
 
@@ -130,5 +130,11 @@ Step 8: Test User Permissions
 
    - CloudFront → Create distribution → Origin = main bucket → enable OAC.
 
-   - Block public access on bucket; CloudFront updates bucket policy.  
+     <img width="1688" height="957" alt="Screenshot 2025-09-23 at 12 00 16 PM" src="https://github.com/user-attachments/assets/a7cc742c-ee50-4b41-ac5b-40e68ecd3dac" />
+
+   - Block public access on bucket; CloudFront updates bucket policy.
+
+   - Public access blocked
+     <img width="1453" height="556" alt="Screenshot 2025-09-23 at 12 03 59 PM" src="https://github.com/user-attachments/assets/b65a047d-0bec-4d53-8262-5f3898bd677b" />
+
 </details>
