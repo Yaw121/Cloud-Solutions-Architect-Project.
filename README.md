@@ -95,3 +95,38 @@ Step 8: Test User Permissions
 - Access to create a Bucket denied
 
 </details>
+
+
+<details>
+
+<summary><b>M2-  STORAGE SERVEICES (S3)</b></summary>
+
+
+### 1: Create main bucket
+
+  - S3 → Create bucket → name: New-cloudlab
+
+  - Region: same as other labs.
+
+  - Enable: Block all public access, Bucket versioning, Default encryption (AWS-KMS).
+
+### 2: Create log bucket
+
+   - S3 → Create bucket → name: lab-m3-logs-<acctid>.
+
+   - Enable server access logging
+
+   - Open main bucket → Properties → Server access logging → enable, target bucket = lab-m3-logs.
+
+ ### 3: Add lifecycle rule
+
+   - Management → Lifecycle → create rule “ExpireOldVersions” → delete noncurrent versions after 30 days.
+
+### 5: Static website (via CloudFront)
+
+   - Upload index.html to main bucket.
+
+   - CloudFront → Create distribution → Origin = main bucket → enable OAC.
+
+   - Block public access on bucket; CloudFront updates bucket policy.  
+</details>
