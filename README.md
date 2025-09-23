@@ -120,7 +120,9 @@ Step 8: Test User Permissions
 
  ### 3: Add lifecycle rule
 
-   - Management → Lifecycle → create rule “ExpireOldVersions” → delete noncurrent versions after 30 days.
+   - Management → Lifecycle → create rule “ExpireOldVersions” → permanently delete noncurrent versions after 30 days.
+     
+<img width="1696" height="841" alt="Screenshot 2025-09-23 at 11 47 23 AM" src="https://github.com/user-attachments/assets/85a36bd8-5fef-4daa-bc26-1dc5e3165783" />
 
 ### 5: Static website (via CloudFront)
 
