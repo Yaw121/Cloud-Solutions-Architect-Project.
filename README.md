@@ -12,8 +12,8 @@ GitHub with step-by-step guides, architecture diagrams, runbooks, and security p
 <details>
   <summary><b>🔹 M1 — Identity & Access Management (IAM)</b></summary>
   
-Goal: Learn users, groups, roles, policies, MFA, and best practices.
-
+### Goal: 
+Apply least-privilege access and enforce MFA through IAM users, groups, roles, and custom policies. Builds the foundation for secure access control in AWS.
 
 ## Step 1: Open the IAM Dashboard
 - Sign in as your admin IAM user (not root).
@@ -101,6 +101,8 @@ Step 8: Test User Permissions
 
 <summary><b>M2-  STORAGE SERVEICES (S3)</b></summary>
 
+### Objective
+Secure object storage with encryption, versioning, lifecycle management, logging, and private access via CloudFront.
 
 ### 1: Create main bucket
 
@@ -138,3 +140,86 @@ Step 8: Test User Permissions
      <img width="1453" height="556" alt="Screenshot 2025-09-23 at 12 03 59 PM" src="https://github.com/user-attachments/assets/b65a047d-0bec-4d53-8262-5f3898bd677b" />
 
 </details>
+
+
+<details>
+
+<summary><b>🔹 M3 — Networking (VPC)</b></summary>
+
+### Goal: 
+Build secure VPC with endpoints & private DNS.
+
+
+### 1: VPC → Create VPC wizard → “VPC with public and private subnets”.
+
+### 2: Add one NAT Gateway for private subnets.
+
+### 3: VPC → Endpoints:
+
+   - Add gateway endpoints for S3, DynamoDB.
+
+   - Add interface endpoints for SSM, EC2Messages, CloudWatch Logs.
+
+### 4: Route 53 → Private Hosted Zone corp.local.
+
+   - Add app.corp.local A record → private instance IP.
+
+### Verify:
+
+   - EC2 in private subnet can reach S3 without internet.
+
+   - Private hosted zone resolves from inside VPC only.
+
+
+
+  
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
