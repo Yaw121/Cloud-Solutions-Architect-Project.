@@ -1,0 +1,11 @@
+Overview
+
+This project builds a secure AWS multi-account foundation similar to what a Cloud Security Engineer would design for a small organization:
+
+Centralized logging with organization CloudTrail
+
+Multi-account structure with OUs
+
+SCPs to prevent dangerous actions
+
+Org-level GuardDuty, Security Hub, and AWS Config
