@@ -1,4 +1,4 @@
-###Overview
+ <b>Overview</b>
 
 This project builds a secure AWS multi-account foundation similar to what a Cloud Security Engineer would design for a small organization:
 
@@ -11,3 +11,4 @@ SCPs to prevent dangerous actions
 Org-level GuardDuty, Security Hub, and AWS Config
 
 
+diagrams/org-architecture.png
