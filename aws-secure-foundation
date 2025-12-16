@@ -1,1 +1,52 @@
+Overview
 
+This project builds a secure AWS multi-account foundation similar to what a Cloud Security Engineer would design for a small organization:
+
+Centralized logging with organization CloudTrail
+
+Multi-account structure with OUs
+
+SCPs to prevent dangerous actions
+
+Org-level GuardDuty, Security Hub, and AWS Config
+
+
+STEPS
+
+Create AWS Organization Structure
+
+Sign in to the management/root account.
+
+Go to AWS Organizations → enable if not already enabled.
+
+Create Organizational Units:
+
+a. Security
+b. Workloads
+
+Create accounts:
+
+a. Security account
+b. Workloads-Dev account
+
+Move accounts into OUs:
+Security → Security OU
+Workloads-Dev → Workloads OU
+
+2. **Create Central Log Bucket in Security Account**
+
+Log into the Security account.
+
+Go to S3 → Create bucket:
+
+Name: org-cloudtrail-logs-<your-unique-id>
+
+Block Public Access: ON
+
+Versioning: optional but recommended
+
+Enable Default Encryption:
+
+Use a KMS CMK (create one if not present).
+
+Under Permissions, add a bucket policy to allow CloudTrail from org:
